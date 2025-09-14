@@ -1,0 +1,123 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+header {
+  background-color: #1e3a5f;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* nav link base styles (normal + visited) */
+nav a,
+nav a:visited {
+  margin: 0 10px;
+  color: teal;               /* default color */
+  text-decoration: none;     /* removes underline */
+  font-weight: 600;
+  transition: color 0.15s ease; /* smooth hover */
+}
+
+/* hover + focus for accessibility */
+nav a:hover,
+nav a:focus {
+  color: darkblue;           /* hover/focus color */
+  outline: none;
+}
+
+/* active click state (brief while clicked) */
+nav a:active {
+  color: navy;
+}
+
+/* persistent active page indicator */
+nav a.active {
+  color: darkblue;           /* highlight color */
+  text-decoration: underline; /* underline current page */
+  font-weight: 700;           /* slightly bolder */
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;  /* optional, keeps content from getting too wide on desktop */
+  margin: 0 auto;     /* centers content */
+}
+
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #1e3a5f;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* spacing between paragraphs only on the home page */
+.home-page main p:first-of-type {
+  margin-bottom: 70px; /* extra space after the first paragraph */
+}
+
+/* optional: general paragraph spacing on home page */
+.home-page main p {
+  margin-bottom: 15px; /* normal spacing between other paragraphs */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.wireframe-box {
+  border: 2px dashed #888;
+  padding: 50px;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.location-image {
+  display: block;            /* puts image on its own line */
+  margin: 10px auto;         /* centers image with vertical spacing */
+  border: 3px solid yellow;  /* small yellow border */
+  border-radius: 10px;       /* rounded corners */
+  max-width: 70%;            /* ensures image never exceeds 80% of page width */
+  height: auto;              /* keeps aspect ratio */
+}
+
+/* Base desktop style already exists */
+
+/* Mobile / small screens */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;  /* vertical spacing */
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* slightly smaller text */
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+}
